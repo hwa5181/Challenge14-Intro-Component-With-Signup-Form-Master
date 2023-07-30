@@ -1,0 +1,223 @@
+/* Reset Sheet (Start) */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    line-height: 1.5;
+}
+
+img, picture, video, canvas, svg{
+    display: block;
+    max-width: 100%;
+}
+
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+    clip: auto !important;
+    -webkit-clip-path: none !important;
+    clip-path: none !important;
+    height: auto !important;
+    margin: auto !important;
+    overflow: visible !important;
+    position: static !important;
+    width: auto !important;
+    white-space: normal !important;
+}
+
+/* Reset Sheet (End) */
+
+/* This Project CSS */
+:root {
+    /* ### Primary  */
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%) ;
+
+    /* ### Accent  */
+    --blue: hsl(248, 32%, 49%);
+
+    /* ### Neutral */
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+
+body {
+    padding: 1.75rem;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../images/bg-intro-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: calc(600/16*1rem);
+}
+
+.sec-heading {
+    color: white;
+    text-align: center;
+}
+
+.sec-heading h1 {
+    font-size: 1.75rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.sec-heading p {
+    margin-bottom: 2.5rem;
+}
+
+.sec-form {
+    text-align: center;
+}
+
+.promotion {
+    border-radius: 1rem;
+    background-color: var(--blue);
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0.6rem 0 0 rgba(0, 0, 0, 0.15);
+}
+
+.form-container {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.6rem 0 0 rgba(0, 0, 0, 0.15);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.group-input {
+    position: relative;
+}
+
+.group-input input {
+    width: 100%;
+    border: 1px solid var(--grayish-blue);
+    border-radius: calc(5/16*1rem);
+    padding: 0.5rem 0 0.5rem 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-blue);
+    outline: none;
+}
+
+.form-container input:focus {
+    border-color: var(--dark-blue);
+}
+
+.errText {
+    text-align: end;
+    color: var(--red);
+    font-style: italic;
+    font-size: 0.75rem;
+    position: absolute;
+    right: 0;
+    bottom: -1.25rem;
+    display: none;
+}
+
+.icon-error{
+    width: 1.5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+    display: none;
+}
+
+::placeholder {
+    color: var(--grayish-blue);
+}
+
+#email::placeholder {
+    /* --placeholder-color define in JS */
+    color: var(--placeholder-color, var(--grayish-blue));
+}
+
+.form-container button {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--green);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    opacity: 0.9;
+}
+
+.terms {
+    color: var(--grayish-blue);
+    font-size: 0.75rem;
+}
+
+.terms span {
+    color: var(--red);
+    font-weight: 600;
+}
+
+@media screen and (min-width: 1000px) {    
+    body {
+        padding: 0;
+        background-image: url('../images/bg-intro-desktop.png');
+        min-height: 100vh;
+   }
+
+   main {
+        flex-direction: row;
+        max-width: calc(1000/16*1rem);
+   }
+
+   .sec-heading {
+        width: 50%;
+        text-align: left;
+        margin-top: auto;
+        margin-bottom: auto;
+   }
+
+   .sec-heading h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+   }
+
+   .sec-form {
+        width: 50%;
+        padding: 1.5rem 0 1.5rem 1.5rem;
+   }
+
+}
