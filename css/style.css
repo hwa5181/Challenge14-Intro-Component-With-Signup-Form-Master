@@ -67,7 +67,8 @@ body {
     background-color: var(--red);
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    min-height: 100vh;
 }
 
 main {
@@ -195,7 +196,6 @@ main {
     body {
         padding: 0;
         background-image: url('../images/bg-intro-desktop.png');
-        min-height: 100vh;
    }
 
    main {
