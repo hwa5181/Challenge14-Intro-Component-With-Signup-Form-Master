@@ -42,10 +42,10 @@ form.addEventListener('submit', function (event) {
     // Custom email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emailInput.value.trim())) {
-        email.style.borderColor = 'var(--red)';
-        email.value = '';
-        email.placeholder = "email@example/com";
-        email.style.setProperty('--placeholder-color', 'var(--red)');
+        emailInput.style.borderColor = 'var(--red)';
+        emailInput.value = '';
+        emailInput.placeholder = "email@example/com";
+        emailInput.style.setProperty('--placeholder-color', 'var(--red)');
         iconErrEmail.style.display = "block";
         errEmail.style.display = "block";
         hasError = true;
@@ -60,8 +60,8 @@ form.addEventListener('submit', function (event) {
 
     if (!hasError) {
         alert("Form Submitted.");
-        email.placeholder = "Email Address";
-        email.style.setProperty('--placeholder-color', 'var(--grayish-blue)');
+        emailInput.placeholder = "Email Address";
+        emailInput.style.setProperty('--placeholder-color', 'var(--grayish-blue)');
         form.reset();
     }
 
